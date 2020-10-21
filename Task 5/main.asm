@@ -5,12 +5,14 @@
 ExitProcess PROTO, dwExitCode: DWORD  ; Exit process prototype
 
 .data ; data segment
-	; define your variables here
+	
+	array DWORD 5, 10, 15, 20			; initalise array with values
 
 .code ; code segment
 
 main PROC ; main procedure
-	; write your assembly code here
+	
+	lea edx, array						; load address of first value
 
 	INVOKE ExitProcess, 0 ; call exit function
   

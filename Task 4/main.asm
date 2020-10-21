@@ -5,12 +5,17 @@
 ExitProcess PROTO, dwExitCode: DWORD  ; Exit process prototype
 
 .data ; data segment
-	; define your variables here
+	
+	array DWORD 4, 3, 5, 6				; initalize array with values
 
 .code ; code segment
 
 main PROC ; main procedure
-	; write your assembly code here
+	
+	lea ebx, array						; load the address of the first value into ebx 
+	mov ecx, [ebx + TYPE array * 1]		; load the value of index 1 (2nd element) into ecx - value is contained in the next address after the address of index 0, hence ebx +
+	mov edx, 10h						; load 10h into edx
+	mov [ebx + TYPE array * 1], edx		; load edx into index 1 (2nd element)
 
 	INVOKE ExitProcess, 0 ; call exit function
   
