@@ -5,8 +5,7 @@ Introductory assembly programming tasks from COMP 1001
 
 Calculate (a+b)-(c+d) 
 
-The values a, b, c, d must be stored in registers EAX, EBX, ECX and EDX. Create a string that could accompany the answer in an output statement (e.g., 'The answer is:'). You
-do not have to output the string.
+The values a, b, c, d must be stored in registers EAX, EBX, ECX and EDX. The answer must be stored into a variable called 'answer'
 
 ### Task 2:
 
