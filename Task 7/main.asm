@@ -21,7 +21,7 @@ main PROC ; main procedure
 	update: 
 		mov ah, [ebx + TYPE string * esi]		; move element at esi index to ah reg.
 		cmp ah, al								; compare asscii value of ah to al to see if it matches
-		jne increment							; if it is 'i' then jump to increment counter function
+		je increment							; if it is 'i' then jump to increment counter function
 		jmp completedTest						; if is not i then jump to completedTest
 
 	completedTest:
